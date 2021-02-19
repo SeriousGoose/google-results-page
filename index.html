@@ -1,124 +1,336 @@
 <html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
     <style>
+        body{
+            font-family: 'Open Sans', sans-serif;
+            font-size:14px;
+        }
+        #header{
+            height:113px;
+            width:100%;
+            border-bottom: 1px solid rgb(218, 218, 218);
+           
+        }
+        #top-header{
+            display:flex;
+            align-items: center;
+            width:100%;
+            height:65px;
+            
+
+        }
+        #google{
+            width:150px;
+            height:40px;
+            display:flex;
+            justify-content: center;
+        }
+        .header{
+            display:flex;
+        }
+        .input{
+            display:flex;
+            align-items:center;
+            opacity:50%;
+        }
+        #input{
+            width:692px;
+            height:46px;
+            border:rgb(218, 218, 218);
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 25px;
+            display: flex;
+        }
+        #input:hover{
+            border:rgba(207, 207, 207, 0.562);
+            border-style:solid;
+            border-width:2px;
+            border-radius:25px;
+        }
+        #text{
+            width:533px;
+            height:34px;
+            border:none;
+            margin-left:7px;
+        }
+        #text:focus{
+            outline-width:0px;
+        }
+        #input-clear{
+            margin-left:10px;
+            padding-right:15px;
+            border:rgb(189, 189, 189);
+            border-style: none solid none none;
+            border-width: 1px;
+            
+        }
+        #mic{
+            padding-left: 20px;
+            padding-right: 25px;
+        }
+        #header-right{
+            display:flex;
+            position:absolute;
+            right:2%;
+            top:5%;
+            
+        }
+        .header-right{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+        #cameron{
+            padding-left:25px;
+        }
+        #sign-on{
+            border-radius:50px
+        }
+        #logo{
+            height:33px;
+            width:92px;
+        }
+        #sign-on{
+            height:32px;
+            width:32px;
+        }
         .svg{   
-            height:24px;
-            width:24px;
+            height:14px;
+            width:14px;
+        }
+        .svg-top{
+            height:16px;
+            width:16px;
+        }
+        .des{
+            padding-left:5px;
+        }
+        #nav{
+            width:692px;
+            height:46px;
+            margin-top:20px;
+            margin-left:155px;
+            opacity:70%;
         }
         .nav{
             display:flex;
+            padding-left:18px;
         }
+        #nav-right{
+            margin-left:80px;
+            display:flex;
+        }
+        .nav-right{
+            display: flex;
+            align-content: center;
+        }
+        #nav-right-tools{
+            padding-left:18px;
+        }
+        #tools{
+            background:white;
+            border-style: none;
+            height:24px;
+            width:50px;
+            font-size:14px;
+        }
+        
+        #tools:hover{
+            border-style: solid;
+            border:rgba(179, 55, 55, 0.562);
+            border-width: 5px;
+        }
+        #settings{
+            color:black;
+            text-decoration: none;
+        }
+        #nav-left{
+            display:flex;
+        }
+        main{
+            margin-left:170px;
+            width:600px;
+        }
+        #results{
+            opacity:60%;
+            margin-bottom:20px;
+            margin-top:15px;
+        }
+        .description{
+            opacity:80%;
+            padding-bottom:30px;
+        }
+
+        .url{
+            opacity:70%;
+        }
+        a{
+            text-decoration: none;
+            color:#1a0dab;
+        }
+        .title{
+            font-size:20px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        .title:hover{
+            text-decoration: underline;
+        }
+        }
+        
     </style>
     <head>
         
     </head>
-    <body>
-        <header>
-            <div><!--Google Logo, Search Bar, Apps and Google Sign-On-->
+    <body >
+        <header id="header">
+            <div id="top-header"><!--Google Logo, Search Bar, Apps and Google Sign-On-->
+                <div class="header" id="google"> 
+                    <img id="logo" src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png>
+                </div>
+                <div class= "header" id="input">
+                    <div class="input" id="input-text">
+                        <input id="text" type=search>
+                    </div>
+                    <div class="input" id="input-clear">
+                        <img class="svg-top" id="clear" src="/Desktop/SVG/cross.svg">
+                    </div>
+                    <div class="input" id="input-mic">
+                        <img class="svg-top" id="mic" src="/Desktop/SVG/mic.svg">
+                    </div>
+                    <div class="input" id="input-search">
+                        <img class="svg-top" id="search" src="/Desktop/SVG/search.svg">
+                    </div>
+                </div>
+                <div  class="header" id= "header-right">
+                    <div class="header-right">
+                        <img class="svg-top" id="svg-apps" src="/Desktop/SVG/apps.svg">
+                    </div>
+                    <div id="cameron" class="header-right">
+                        <img id="sign-on" src="https://lh3.googleusercontent.com/ogw/ADGmqu_yN4rqWdIV4oKCgQv39JSmK7rr9NFgAqxkVLR8_w=s32-c-mo">
+                    </div>
+                </div>
+                
             </div>
-            <nav><!-- Nav Items: All, News, images, Videos, Shopping, More, Settings, Tools-->
-                <div class="nav" id="nav-all"><!--Nav Item-->
-                    <div class="nav-svg"><!--SVG-->
-                        <img class = "svg" id="svg-all" src="/Desktop/SVG/search.svg" alt="Search"/>
+            <nav id="nav"><!-- Nav Items: All, News, images, Videos, Shopping, More, Settings, Tools-->
+                <div id="nav-left">
+                    <div class="nav" id="nav-all"><!--Nav Item-->
+                        <div class="nav-svg"><!--SVG-->
+                            <img class = "svg" id="svg-all" src="/Desktop/SVG/search.svg" alt="Search"/>
+                        </div>
+                        <div class="nav-des"><!--Text-->
+                            <span class="des" id="des-all">All</span>
+                        </div>
                     </div>
-                    <div class="nav-des"><!--Text-->
-                        <span class="des" id="des-all">All</span>
+                    <div class="nav" id="nav-news"><!--Nav Item-->
+                        <div class="nav-svg"><!--SVG-->
+                            <img class = "svg" id="svg-news" src="/Desktop/SVG/news.svg" alt="Search"/>
+                        </div>
+                        <div class="nav-des"><!--Text-->
+                            <span class="des" id="des-news">News</span>
+                        </div>
                     </div>
-                </div>
-                <div class="nav" id="nav-news"><!--Nav Item-->
-                    <div class="nav-svg"><!--SVG-->
-                        <img class = "svg" id="svg-news" src="/Desktop/SVG/news.svg" alt="Search"/>
+                    <div class="nav" id="nav-videos"><!--Nav Item-->
+                        <div class="nav-svg"><!--SVG-->
+                            <img class = "svg" id="svg-videos" src="/Desktop/SVG/video.svg" alt="Search"/>
+                        </div>
+                        <div class="nav-des"><!--Text-->
+                            <span class="des" id="des-videos">Videos</span>
+                        </div>
                     </div>
-                    <div class="nav-des"><!--Text-->
-                        <span class="des" id="des-news">News</span>
+                    <div class="nav" id="nav-maps"><!--Nav Item-->
+                        <div class="nav-svg"><!--SVG-->
+                            <img class = "svg" id="svg-maps" src="/Desktop/SVG/maps.svg" alt="Search"/>
+                        </div>
+                        <div class="nav-des"><!--Text-->
+                            <span class="des" id="des-maps">Maps</span>
+                        </div>
                     </div>
-                </div>
-                <div class="nav" id="nav-videos"><!--Nav Item-->
-                    <div class="nav-svg"><!--SVG-->
-                        <img class = "svg" id="svg-videos" src="/Desktop/SVG/video.svg" alt="Search"/>
+                    <div class="nav" id="nav-shop"><!--Nav Item-->
+                        <div class="nav-svg"><!--SVG-->
+                            <img class = "svg" id="svg-shop" src="/Desktop/SVG/tag.svg" alt="Search"/>
+                        </div>
+                        <div class="nav-des"><!--Text-->
+                            <span class="des" id="des-shop">Shopping</span>
+                        </div>
                     </div>
-                    <div class="nav-des"><!--Text-->
-                        <span class="des" id="des-videos">Videos</span>
+                    <div class="nav" id="nav-more"><!--Nav Item-->
+                        <div class="nav-svg"><!--SVG-->
+                            <img class = "svg" id="svg-more" src="/Desktop/SVG/more.svg" alt="Search"/>
+                        </div>
+                        <div class="nav-des"><!--Text-->
+                            <span class="des" id="des-more">More</span>
+                        </div>
                     </div>
-                </div>
-                <div class="nav" id="nav-maps"><!--Nav Item-->
-                    <div class="nav-svg"><!--SVG-->
-                        <img class = "svg" id="svg-maps" src="/Desktop/SVG/maps.svg" alt="Search"/>
+                <div>
+                <div id="nav-right">
+                    <div class="nav-right" id="nav-right-settings">
+                        <a class="settings-tools" id="settings" href=https://www.google.com/preferences>Settings</a>
                     </div>
-                    <div class="nav-des"><!--Text-->
-                        <span class="des" id="des-maps">Maps</span>
-                    </div>
-                </div>
-                <div class="nav" id="nav-shop"><!--Nav Item-->
-                    <div class="nav-svg"><!--SVG-->
-                        <img class = "svg" id="svg-shop" src="/Desktop/SVG/tag.svg" alt="Search"/>
-                    </div>
-                    <div class="nav-des"><!--Text-->
-                        <span class="des" id="des-shop">Shopping</span>
-                    </div>
-                </div>
-                <div class="nav" id="nav-more"><!--Nav Item-->
-                    <div class="nav-svg"><!--SVG-->
-                        <img class = "svg" id="svg-more" src="/Desktop/SVG/more.svg" alt="Search"/>
-                    </div>
-                    <div class="nav-des"><!--Text-->
-                        <span class="des" id="des-more">More</span>
+                    <div class="nav-right" id="nav-right-tools">
+                        <button type="button" text="Tools" class="settings-tools" id="tools">Tools</button>
                     </div>
                 </div>
             </nav>
         </header>
         <main>
-            <div><!--Number of Results-->
-                <span>About 123,000,000 results (0.62 seconds) </span>
+            <div id="results"><!--Number of Results-->
+                <span >About 123,000,000 results (0.62 seconds) </span>
             </div>
             <div><!--Main Elements, including results, People Ask, Searches Related, GOOOOOGLE results -->
                 <div><!--Entire search result indluding url/tags, hyperlink title, description,followable links-->
                     <div><!--url/tags-->
-                        <h4>
+                        <div class="url">
                             victor-lf.github.io › google-search-results
-                        </h4>
+                        </div>
                     </div>
                     <div><!--hyperlink title-->
-                        <h3>
+                        <div class="title">
                             <a href= https://victor-lf.github.io/google-search-results/>build this webpage - GitHub Pages</a>
-                        </h3>
+                        </div>
                     </div>
                     <div><!--description-->
-                        <p>
+                        <div class="description">
                             build this webpage. https://benjdelt.github.io/google-results/. With zero coding experience, artist building 180 webpages in 180 days ...
-                        </p>
+                        </div>
                     </div>
                 </div>
                 <div><!--Entire search result indluding url/tags, hyperlink title, description,followable links-->
                     <div><!--url/tags-->
-                        <h4>
+                        <div class="url">
                             christine-27.github.io › google-homepage
-                        </h4>
+                        </div>
                     </div>
                     <div><!--hyperlink title-->
-                        <h3>
+                        <div class="title">
                            <a href=https://christine-27.github.io/google-homepage/> build this webpage - GitHub Pages</a>
-                        </h3>
+                        </div>
                     </div>
                     <div><!--description-->
-                        <p>
-                            With zero coding experience, artist building 180 webpages . ... days ago, having never done any programming in her life, Jennifer Dewalt built her first webpage.                        </p>
+                        <div class="description">
+                            With zero coding experience, artist building 180 webpages . ... days ago, having never done any programming in her life, Jennifer Dewalt built her first webpage.                       
+                        </div>
                     </div>
                 </div>
                 <div><!--Entire search result indluding url/tags, hyperlink title, description,followable links-->
                     <div><!--url/tags-->
-                        <h4>
+                        <div class="url">
                             www.websitebuilderexpert.com › building-websites
-                        </h4>
+                        </div>
                     </div>
                     <div><!--hyperlink title-->
-                        <h3>
+                        <div class="title">
                             <a href = https://www.websitebuilderexpert.com/building-websites/>How to Build a Website 2021 | A Step-by-Step Beginner's Guide</a>
-                        </h3>
+                        </div>
                     </div>
                     <div><!--description-->
-                        <p>
+                        <div class="description">
                             Feb 1, 2021 — Anyone can build a website with the right tools - and the right guide! We'll show you how to make yours in just 9 steps.
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -138,122 +350,121 @@
             </div>
             <div><!--Entire search result indluding url/tags, hyperlink title, description,followable links-->
                 <div><!--url/tags-->
-                    <h4>
+                    <div class="url">
                         websitesetup.org
-                    </h4>
+                    </div>
                 </div>
                 <div><!--hyperlink title-->
-                    <h3>
+                    <div class="title">
                         <a href=https://websitesetup.org/>How to Create a Website: Step-by-Step Guide for Beginners ...</a>
-                    </h3>
+                    </div>
                 </div>
                 <div><!--description-->
-                    <p>
+                    <div class="description">
                         Jan 25, 2021 — Learn how to make a website and set it up. This site contains different tutorials on how to build a website using WordPress, Joomla, Drupal ...                   
-                    </p>
+                    </div>
                 </div>
             </div>
             <div><!--Entire search result indluding url/tags, hyperlink title, description,followable links-->
                 <div><!--url/tags-->
-                    <h4>
+                    <div class="url">
                         makeawebsitehub.com
-                    </h4>
+                    </div>
                 </div>
                 <div><!--hyperlink title-->
-                    <h3>
+                    <div class="title">
                        <a href=https://makeawebsitehub.com/> Make Your Own Website in Just 1 Hour With This Easy Guide ...</a>
-                    </h3>
+                    </div>
                 </div>
                 <div><!--description-->
-                    <p>
+                    <div class="description">
                         This site teaches you how to make a website in just 3 easy to follow steps. There's also lots of really useful resources to help you build traffic in 2021.
-                    </p>
+                    </div>
                 </div>
             </div>
             <div><!--Entire search result indluding url/tags, hyperlink title, description,followable links-->
                 <div><!--url/tags-->
-                    <h4>
+                    <div class="url">
                         www.pcmag.com › ... › Web Hosting
-                    </h4>
+                    </div>
                 </div>
                 <div><!--hyperlink title-->
-                    <h3>
+                    <div class="title">
                        <a href = https://www.pcmag.com/how-to/how-to-create-a-website> How to Create a Website | PCMag</a>
-                    </h3>
+                    </div>
                 </div>
                 <div><!--description-->
-                    <p>
+                    <div class="description">
                         They also won't make you a web designer, a job that's distinct from building a site. Still, these services and software will ease some of the headaches that come ...
-                    </p>
+                    </div>
                 </div>
             </div>
             <div><!--Entire search result indluding url/tags, hyperlink title, description,followable links-->
                 <div><!--url/tags-->
-                    <h4>
+                    <div class="url">
                         www.squarespace.com
-                    </h4>
+                    </div>
                 </div>
                 <div><!--hyperlink title-->
-                    <h3>
+                    <div class="title">
                         <a href=https://www.squarespace.com/>Squarespace: Build a Website – Website Builder</a>
-                    </h3>
+                    </div>
                 </div>
                 <div><!--description-->
-                    <p>
+                    <div class="description">
                         Squarespace is the all-in-one solution for anyone looking to create a beautiful website. Domains, eCommerce, hosting, galleries, analytics, and 24/7 support all ...
-                    </p>
+                    </div>
                 </div>
             </div>
             <div><!--Entire search result indluding url/tags, hyperlink title, description,followable links-->
                 <div><!--url/tags-->
-                    <h4>  
+                    <div class="url">  
                         neilpatel.com › blog › from-0-to-launch-6-steps-to-buil...
-                    </h4>
+                    </div>
                 </div>
                 <div><!--hyperlink title-->
-                    <h3>
+                    <div class="title">
                        <a href=https://neilpatel.com/blog/from-0-to-launch-6-steps-to-building-your-first-website/>Build a Website: 6 Steps From 0 to Launch - Neil Patel</a>
-                    </h3>
+                    </div>
                 </div>
                 <div><!--description-->
-                    <p>
+                    <div class="description">
                         Ready to build a website? Here's step by step guide to building and opimizing your first website including what hosting and CMS to use.
-                    </p>
+                    </div>
                 </div>
             </div>
             <div><!--Entire search result indluding url/tags, hyperlink title, description,followable links-->
                 <div><!--url/tags-->
-                    <h4>
+                    <div class="url">
                         www.webhostingsecretrevealed.net › WHSR Blog
-                    </h4>
+                    </div>
                 </div>
                 <div><!--hyperlink title-->
-                    <h3>
+                    <div class="title">
                         <a href=https://www.webhostingsecretrevealed.net/blog/web-hosting-guides/make-a-website/>How to Create a Website: Step-by-Step Tutorial</a>
-                    </h3>
+                    </div>
                 </div>
                 <div><!--description-->
-                    <p>
+                    <div class="description">
                         Jan 28, 2021 — Today – we have innovative development tools and better web publishing platforms. There are three ways to make a website: Creating from ...
-
-                    </p>
+                    </div>
                 </div>
             </div>
             <div><!--Entire search result indluding url/tags, hyperlink title, description,followable links-->
                 <div><!--url/tags-->
-                    <h4>             
+                    <div class="url">             
                         www.codecademy.com › learn › make-a-website
-                    </h4>
+                    </div>
                 </div>
                 <div><!--hyperlink title-->
-                    <h3>
+                    <div class="title">
                        <a href=https://www.codecademy.com/learn/make-a-website>How to Make a Website with NameCheap | Codecademy</a>
-                    </h3>
+                    </div>
                 </div>
                 <div><!--description-->
-                    <p>
+                    <div class="description">
                         You'll build four simple websites using web development fundamentals, including HTML5, CSS3 and Bootstrap. You'll learn to understand and modify the ...
-                    </p>
+                    </div>
                 </div>
             </div>
         </main>
